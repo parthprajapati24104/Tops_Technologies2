@@ -488,7 +488,8 @@ INSERT INTO sales_data (Row_ID, Order_ID, Order_Date, Ship_Date, Ship_Mode, Cust
 
 SELECT SUM(Profit) FROM sales_data;
 
--- 2. Find Top 5 Categories by Sales in superstote dataset
+
+-- 2. Find Top 3 Categories by Sales in superstote dataset
 
 SELECT Category, SUM(Sales) AS Total_Sales
 FROM sales_data
@@ -507,11 +508,7 @@ SELECT AVG(Discount) FROM sales_data;
 
 -- 5 Find the Top 5 Product Names by Sales in superstore dataset
 
-SELECT Product_Name, SUM(Sales) AS Total_Sales
-FROM sales_data
-GROUP BY Product_Name
-ORDER BY Total_Sales DESC
-LIMIT 5;
+ ;
 
 -- 6Find the  Orders by Order Date First 10 in superstore
 
@@ -546,3 +543,37 @@ LIMIT 5;
 SELECT SUM(Sales) AS Total_Sales, SUM(Profit) AS Total_Profit, AVG(Sales) AS Average_Sales
 FROM sales_data
 WHERE Category = 'Technology';
+
+
+
+-- Insight
+
+-- 1 TOTAL PROFIT IS 3031.16.
+
+-- 2 HIGHEST TOTAL_SALES IN CATEGORY = Technology
+
+-- 3 HIGHEST NUMBER_OF_ORDERS BY SHIP_DATE = STANDARD CLASS
+
+-- 4 AVERAGE DISCOUNT = 0.1818
+
+-- 5 TOP 3 HIGHEST TOTAL_SALES BY PRODUCT_NAME =
+--         1. LEXMARK MX611DHE MONOCHROME LASER PRINTER
+--         2. RIVERSIDE PALAIS ROYAL LAWYERS BOOKCASE,ROYAL
+--         3. GBC DOCUBIND P400 ELECTRIC BINDING SYSTEM
+
+-- 6 FIRST OF ORDER IN ORDER_DATE IS = 2014-01-03
+
+-- 7 FURNITURE BY TOTAL_SALES AND TOTAL_QUANTITY IS = 41695.51 AND 356
+
+-- 8 CUSTOMER_NAME BY HIGHEST TOTAL_SALES =
+ -- NAME = BECKY MARTIN
+ -- TOTAL_SALES = 10539.90
+ 
+ -- 9 STATE NAME AND HIGHEST TOTAL_PROFIT =
+ -- NAME = NEW YORK
+ -- TOTAL_PROFIT = 4749.21
+ 
+ -- 10 TECHNOLOGY BY TOTAL_SALES,TOTAL_PROFIT, AVERAGE_SALES
+ -- TOTAL_SALES = 43231.22
+ -- TOTAL_PROFIT = 2584.01
+ -- AVERAGE_SALES = 568.83
